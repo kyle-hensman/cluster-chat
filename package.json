@@ -1,0 +1,22 @@
+{
+  "name": "socketio-chat",
+  "version": "1.0.0",
+  "description": "A simple chat application built using Socket.io, customized to run in Docker with PM2 and conditional clusters",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "cluster": "node cluster.js",
+    "build-image": "docker build -t socketio-chat . --no-cache",
+    "docker": "docker run -p 3000:3000 socketio-chat"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "ioredis": "^4.9.0",
+    "socket.io": "^2.2.0",
+    "socket.io-client": "^2.2.0",
+    "socket.io-redis": "^5.2.0"
+  }
+}
