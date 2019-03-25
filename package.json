@@ -20,7 +20,7 @@
     "Chat"
   ],
   "author": "Kyle Hensman",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "express": "^4.16.4",
     "ioredis": "^4.9.0",
