@@ -97,7 +97,7 @@ Please visit this link to learn how to [Deploy with PM2](https://pm2.io/doc/en/r
 
 ## Author
 
-* **Kyle Hensman** - *Other work* - [GitHub](https://github.com/kyle-hensman)
+* **Kyle Hensman** - Check him out on [GitHub](https://github.com/kyle-hensman)
 
 
 ## License
