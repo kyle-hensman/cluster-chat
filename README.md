@@ -1,20 +1,21 @@
 # Cluster Chat
 
-A simple chat application built using example guide provided by Socket.io, customized to run as a cluster using [Docker](https://www.docker.com/) and [PM2](pm2.keymetrics.io).
+A simple chat application built using example guide provided by Socket.io, customized to run as a cluster using [Docker](https://www.docker.com/), [PM2](pm2.keymetrics.io) and [Redis](https://redis.io/).
 
 
-## Getting Started
+# Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-## Prerequisites
+# Prerequisites
 
 Please make sure you have the following items installed on your local machine.
 * [NodeJS](https://nodejs.org/en/) (JavaScript Runtime)
-* [NPM](https://www.npmjs.com/) (Package Manager)
+* [Redis](https://redis.io/) (Message Broker)
 * [Docker](https://www.docker.com/) (Container Management)
+* [PM2](pm2.keymetrics.io) (Process Manager)
 
-## Installation
+# Install
 
 To install the Cluster-Chat you need to first clone the repo and install the dependencies.
 
@@ -25,7 +26,9 @@ git clone https://github.com/kyle-hensman/cluster-chat.git
 ```
 
 #### Install Dependencies
+
 Change directories into the project folder,
+
 ```
 cd cluster-chat
 ```
@@ -34,12 +37,12 @@ then install dependencies.
 npm install
 ```
 
-## Start The Application
+# Start
 
-the following is a list of options on how to start the Cluster-Chat the application.
+You can start the Application with one of the following methods.
 
-
-#### NodeJS
+### 1. NodeJS
+---
 
 Run a single Nodejs instance of the application.
 
@@ -47,7 +50,8 @@ Run a single Nodejs instance of the application.
 npm run start
 ```
 
-#### NodeJS Cluster
+### 2. NodeJS Cluster
+---
 
 Use NodeJS cluster module to fire up a cluster server of the applicaton.
 
@@ -55,7 +59,8 @@ Use NodeJS cluster module to fire up a cluster server of the applicaton.
 npm run cluster
 ```
 
-#### PM2 Single Instance
+### 3. PM2 Single Instance
+---
 
 Use PM2 to fire up a single instance of the applicaton.
 
@@ -63,7 +68,8 @@ Use PM2 to fire up a single instance of the applicaton.
 pm2 start server.js
 ```
 
-#### PM2 Cluster X4
+### 4. PM2 Cluster X4
+---
 
 Use PM2 to fire up a cluster server of the applicaton running on 4 cores.
 
@@ -71,7 +77,8 @@ Use PM2 to fire up a cluster server of the applicaton running on 4 cores.
 pm2 start server.js -i 4
 ```
 
-#### Docker Container
+### 5. Docker Container
+---
 
 Use docker to build an image and start the container that will detect how many cores are available, and create a cluster server for your applicaton.
 
@@ -88,11 +95,10 @@ Please visit this link to learn how to [Deploy with PM2](https://pm2.io/doc/en/r
 
 ## Built With
 
-* [Express](https://expressjs.com/) - Server
-* [Socket.IO](https://socket.io/) - Websockets
-* [NPM](https://www.npmjs.com/) - Dependency Management
-* [Docker](https://www.docker.com/) - Container Management
-* [PM2](pm2.keymetrics.io) - Process Management
+* [Express](https://expressjs.com/) - Server Library
+* [Socket.IO](https://socket.io/) - Websockets Library
+* [Redis](https://redis.io/) - Database, Caching and Message Broker
+* [ioredis](https://www.npmjs.com/package/ioredis) - Redis Client
 
 
 ## Author
@@ -102,7 +108,7 @@ Please visit this link to learn how to [Deploy with PM2](https://pm2.io/doc/en/r
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License
 
 
 ## Acknowledgments

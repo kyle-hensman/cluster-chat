@@ -9,14 +9,22 @@
     "build-image": "docker build -t socketio-chat . --no-cache",
     "docker": "docker run -p 3000:3000 socketio-chat"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "Socket.IO",
+    "Redis",
+    "NodeJS",
+    "Express",
+    "PM2",
+    "Cluster",
+    "Docker",
+    "Chat"
+  ],
+  "author": "Kyle Hensman",
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.4",
     "ioredis": "^4.9.0",
     "socket.io": "^2.2.0",
-    "socket.io-client": "^2.2.0",
-    "socket.io-redis": "^5.2.0"
+    "socket.io-client": "^2.2.0"
   }
 }
