@@ -1,43 +1,20 @@
 # Cluster Chat
 
-A simple chat application built using Socket.io, customized to run as a cluster using [Docker](https://www.docker.com/) and [PM2](pm2.keymetrics.io).
+A simple chat application built using example guide provided by Socket.io, customized to run as a cluster using [Docker](https://www.docker.com/) and [PM2](pm2.keymetrics.io).
 
 
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
+## Prerequisites
 
-### Prerequisites
+Please make sure you have the following items installed on your local machine.
+* [NodeJS](https://nodejs.org/en/) (JavaScript Runtime)
+* [NPM](https://www.npmjs.com/) (Package Manager)
+* [Docker](https://www.docker.com/) (Container Management)
 
-To run this application you first need to ensure both NodeJS, NPM and Docker are installed on your machine.
-
-#### Install NodeJS and NPM
-```
-sudo apt-get update
-```
-```
-sudo apt-get install nodejs npm
-```
-```
-nodejs --version
-```
-
-#### Install Docker-CE
-```
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-```
-```
-sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
-```
-```
-sudo apt-get update
-```
-```
-sudo apt-get install -y docker-ce
-```
-
-### Installing
+## Installation
 
 To install the Cluster-Chat you need to first clone the repo and install the dependencies.
 
@@ -48,17 +25,21 @@ git clone https://github.com/kyle-hensman/cluster-chat.git
 ```
 
 #### Install Dependencies
+Change directories into the project folder,
+```
 cd cluster-chat
+```
+then install dependencies.
 ```
 npm install
 ```
 
-### Start the Applicatoin
+## Start The Application
 
 the following is a list of options on how to start the Cluster-Chat the application.
 
 
-## NodeJS
+#### NodeJS
 
 Run a single Nodejs instance of the application.
 
@@ -66,7 +47,7 @@ Run a single Nodejs instance of the application.
 npm run start
 ```
 
-## NodeJS Cluster
+#### NodeJS Cluster
 
 Use NodeJS cluster module to fire up a cluster server of the applicaton.
 
@@ -74,7 +55,7 @@ Use NodeJS cluster module to fire up a cluster server of the applicaton.
 npm run cluster
 ```
 
-## PM2 Single Instance
+#### PM2 Single Instance
 
 Use PM2 to fire up a single instance of the applicaton.
 
@@ -82,7 +63,7 @@ Use PM2 to fire up a single instance of the applicaton.
 pm2 start server.js
 ```
 
-## PM2 Cluster X4
+#### PM2 Cluster X4
 
 Use PM2 to fire up a cluster server of the applicaton running on 4 cores.
 
@@ -90,7 +71,7 @@ Use PM2 to fire up a cluster server of the applicaton running on 4 cores.
 pm2 start server.js -i 4
 ```
 
-## Docker Container
+#### Docker Container
 
 Use docker to build an image and start the container that will detect how many cores are available, and create a cluster server for your applicaton.
 
@@ -100,8 +81,7 @@ Build the Docker image and start the container.
 npm run build-image && npm run docker
 ```
 
-
-## Deployment
+# Deployment
 
 Please visit this link to learn how to [Deploy with PM2](https://pm2.io/doc/en/runtime/guide/easy-deploy-with-ssh/#easy-deploy-with-ssh)
 
