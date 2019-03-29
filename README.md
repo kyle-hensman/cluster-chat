@@ -2,6 +2,9 @@
 
 A simple chat application built using example guide provided by Socket.io, customized to run as a cluster using [Docker](https://www.docker.com/), [PM2](pm2.keymetrics.io) and [Redis](https://redis.io/).
 
+## Demo
+[cluster-chat](http://chat-cluster.7e14.starter-us-west-2.openshiftapps.com/)
+
 
 # Getting Started
 
